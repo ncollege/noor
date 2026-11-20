@@ -1,0 +1,94 @@
+# Experiment No.: ___
+
+## Title: Design and Analyze Architecture of Aneka / Eucalyptus / KVM
+
+### Aim:
+To study and analyze the architecture of Aneka, Eucalyptus and KVM and identify their different entities and components.
+
+### Objectives:
+1. To understand cloud computing architecture.
+2. To study the components of Aneka, Eucalyptus and KVM.
+3. To understand the working of different entities.
+4. To identify the role of each component.
+
+### 1. Aneka Architecture
+
+**Definition:** Aneka is a cloud application platform used to develop and execute distributed applications.
+
+**Main Components:**
+
+1. **Aneka Container:** Basic deployment unit that hosts Aneka services.
+2. **Master Node:** Manages applications and schedules tasks.
+3. **Worker Node:** Executes assigned tasks.
+4. **Fabric Services:** Manage hardware resources.
+5. **Foundation Services:** Provide monitoring, storage and resource management.
+6. **Execution Services:** Execute application tasks.
+7. **SDK:** Helps developers create cloud applications.
+
+**Working:**
+1. User develops an application using Aneka SDK.
+2. Application is submitted to the Master Node.
+3. Scheduler divides the application into tasks.
+4. Tasks are assigned to Worker Nodes.
+5. Worker Nodes execute the tasks.
+6. Results are returned to the Master Node.
+
+### 2. Eucalyptus Architecture
+
+**Definition:** Eucalyptus is an open-source cloud computing platform used to create private and hybrid clouds.
+
+**Main Components:**
+
+1. **Cloud Controller (CLC):** Manages the entire cloud infrastructure.
+2. **Cluster Controller (CC):** Manages a group of nodes and schedules VMs.
+3. **Node Controller (NC):** Creates and manages virtual machines.
+4. **Walrus:** Provides object storage.
+5. **Storage Controller (SC):** Provides block storage for virtual machines.
+
+**Working:**
+1. User sends a request to the Cloud Controller.
+2. CLC forwards the request to the Cluster Controller.
+3. CC selects an available Node Controller.
+4. NC communicates with the hypervisor.
+5. Hypervisor creates and runs virtual machines.
+6. Storage services provide the required storage.
+
+### 3. KVM Architecture
+
+**Definition:** KVM stands for Kernel-based Virtual Machine. It is a Linux virtualization technology used to run multiple virtual machines on a single physical machine.
+
+**Main Components:**
+
+1. **Host Machine:** Physical computer.
+2. **Host OS:** Linux operating system.
+3. **KVM Module:** Provides hardware virtualization support.
+4. **QEMU:** Provides virtual hardware for virtual machines.
+5. **Libvirt:** Manages virtual machines.
+6. **Guest OS:** Operating system running inside a VM.
+7. **Virtual Machine:** Software-based computer.
+
+**Working:**
+1. User creates a virtual machine using management tools.
+2. Libvirt manages the VM configuration.
+3. QEMU creates the virtual hardware.
+4. KVM provides hardware virtualization.
+5. Guest operating system starts inside the VM.
+6. Multiple virtual machines can run on one physical machine.
+
+### Difference Between Aneka, Eucalyptus and KVM
+
+| Aneka | Eucalyptus | KVM |
+|---|---|---|
+| Application platform | Cloud platform | Virtualization technology |
+| Executes applications | Manages cloud infrastructure | Runs virtual machines |
+| Uses Master and Worker | Uses CLC, CC and NC | Uses QEMU and KVM |
+
+### Advantages:
+1. Efficient resource utilization.
+2. Scalability and flexibility.
+3. Better resource management.
+4. Supports distributed computing.
+5. Reduces hardware requirements.
+
+### Conclusion:
+Thus, we studied and analyzed the architecture of Aneka, Eucalyptus and KVM and identified their major components, entities and functions. We also understood the working of each architecture.
